@@ -1,0 +1,21 @@
+.list.add-book-list .item > .content > .description {
+  padding: 0 !important;
+}
+
+.song-list {
+  .dropdown.song-list-action {
+    visibility: hidden;
+
+    > .icon {
+      color: rgba(0, 0, 0, 0.6);
+    }
+  }
+
+  tr {
+    &:hover, &:focus {
+      .dropdown.song-list-action {
+        visibility: visible;
+      }
+    }
+  }
+}

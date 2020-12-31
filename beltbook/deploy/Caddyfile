@@ -1,0 +1,15 @@
+# /etc/Caddyfile
+beltbook.your.domain {
+    root * /home/your-user/BeltBook/beltbook
+    @notStatic {
+        not {
+            file {
+                try_files {path}
+            }
+        }
+    }
+    reverse_proxy @notStatic 127.0.0.1:8002
+    file_server {
+        # root /home/your-user/BeltBook/beltbook/static
+    }
+}
